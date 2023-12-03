@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const {Circle, Square, Triangle, SVG} = require("./lib/shapes.js");
+const Utils = require("./lib/utils.js");
 
 inquirer
    .prompt([
@@ -19,31 +20,20 @@ inquirer
     {
         type: "input",
         name: "textColor",
-        message: "please select the color of the text using key word or #hexadecimal?"
+        message: "please select the color of the text using key word (or a #hexadecimal number)?"
         
     },
     {
         type: "input",
         name: "shapeColor",
-        message: "please select the color of the shape using key word or #hexadecimal?",
+        message: "please select the color of the shape using key word (or a #hexadecimal number)?",
         
     },
     ])
    .then((answers) => {
-  switch(answers.selectedShape) {
-    case "Circle":
-      shape = new Circle();
-      break;
-    case "Square":
-      shape = new Square();
-      break;
-    case "Triangle":
-      shape = new Triangle();
-      break;
-    default:
-     console.log("Please select a valid shape");
-     return;
-    }
+  
+    shape = Utils.shapeSelector(answers.selectedShape);
+
     shape.setFillColor(answers.shapeColor);
     let svg = new SVG(300, 200);
     svg.setTextColor(answers.textColor);
@@ -51,7 +41,8 @@ inquirer
     svg.setShape(shape.draw());
     let xmlString = svg.getSVG();
     console.log(xmlString);
-    fs.writeFile("logo.svg", xmlString, (err) =>
-   err? console.error(err) : console.log('Generated logo.svg'));
+    let fileName = `logo-${answers.selectedShape}-${answers.shapeColor}.svg`;
+    fs.writeFile(fileName, xmlString, (err) =>
+   err? console.error(err) : console.log(`Generated ${fileName} successfully`));
 });
         

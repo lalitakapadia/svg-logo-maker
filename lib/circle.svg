@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" >
-    <circle cx="300" cy="300" r="200" fill="red"></circle>
-    <text x="300" y="300" font-size="150" text-anchor="middle" fill="green">ABC</text>
-    <rect cx="300" cy="200" r="200" fill="yellow" stroke="aqua"></rect>
-    <polygon points="200, 60 400, 200 0, 220" fill="blueviolet"/>
-</svg>

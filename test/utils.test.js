@@ -1,7 +1,7 @@
 const {Circle, Square, Triangle, SVG} = require("../lib/shapes.js");
-const {Utils} = require("../lib/utils.js");
+const Utils = require("../lib/utils.js");
 
-describe("utils", () => {
+describe("Utils", () => {
     describe("shapeSelector", () => {
         it("should return a circle", () => {
             const utils = new Utils();

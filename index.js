@@ -31,8 +31,8 @@ inquirer
     },
     ])
    .then((answers) => {
-  
-    shape = Utils.shapeSelector(answers.selectedShape);
+    
+    const utils = new Utils();
 
     shape.setFillColor(answers.shapeColor);
     let svg = new SVG(300, 200);

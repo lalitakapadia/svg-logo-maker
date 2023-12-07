@@ -22,4 +22,11 @@ describe("Utils", () => {
             expect(() => Utils.shapeSelector("invalid")).toThrow();
         });
     });
+
+    describe("generateFile", () => {
+        it("should generate a file using the given parameters", () => {
+            const utils = new Utils();
+            expect(utils.generateFile("circle", "blue", "red", "tut", "<svg/>")).toBe("logo-circle-blue-red-tut.svg");
+        });
+    });
 });

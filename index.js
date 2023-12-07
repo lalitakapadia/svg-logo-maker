@@ -33,6 +33,7 @@ inquirer
    .then((answers) => {
     
     const utils = new Utils();
+    let shape = utils.shapeSelector(answers.selectedShape);
 
     shape.setFillColor(answers.shapeColor);
     let svg = new SVG(300, 200);
@@ -41,8 +42,7 @@ inquirer
     svg.setShape(shape.draw());
     let xmlString = svg.getSVG();
     console.log(xmlString);
-    let fileName = `logo-${answers.selectedShape}-${answers.shapeColor}.svg`;
-    fs.writeFile(fileName, xmlString, (err) =>
-   err? console.error(err) : console.log(`Generated ${fileName} successfully`));
+    let fileName = utils.generateFile(answers.shapeColor, answers.selectedShape, answers.textColor, answers.text, xmlString);
+    console.log(`Generated ${fileName} successfully`);
 });
         

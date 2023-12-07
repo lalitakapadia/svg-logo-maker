@@ -24,6 +24,10 @@ npm init -Y,
 npm i inquirer@8.2.4,
 node index.js
 
+Video link has been provided for users to follow the instructions and generate svg file.
+
+https://drive.google.com/file/d/1fNKZR1z0NK7r4lqvzMlGflD-YMJgQuWz/view?usp=drive_link
+
 ## Usage
 to generate a professional logo in svg format.
 

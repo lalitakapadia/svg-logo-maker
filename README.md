@@ -18,9 +18,10 @@
 To generage a logo in svg format. The application asks logo text (up to three characters), logo and text color. The application generate the logo using the user answers.
 
 ## Installation
-Clone the github repository in your local machine, run the following commands in order. Then user can generate the logo and see the logo on brouser in svg format
-npm init -Y
-npm i inquirer@8.2.4
+Clone the github repository in your local machine, run the following commands in order. Then user can generate the logo and see the logo on brouser in svg format.
+
+npm init -Y,
+npm i inquirer@8.2.4,
 node index.js
 
 ## Usage

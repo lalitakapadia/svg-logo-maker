@@ -34,7 +34,7 @@ https://github.com/lalitakapadia/svg-logo-maker/blob/main/logo-green-Circle-whit
 
 https://github.com/lalitakapadia/svg-logo-maker/blob/main/logo-green-Square-white-svg.svg
 
-https://github.com/lalitakapadia/svg-logo-maker/blob/main/logo-green-Square-white-svg.svg
+https://github.com/lalitakapadia/svg-logo-maker/blob/main/logo-green-Triangle-white-svg.svg
 
 ## Usage
 to generate a professional logo in svg format.
